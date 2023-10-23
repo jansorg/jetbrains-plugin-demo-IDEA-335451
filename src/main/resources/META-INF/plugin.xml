@@ -1,0 +1,9 @@
+<idea-plugin>
+    <id>dev.ja.test.jetbrains-plugin-demo</id>
+    <name>Jetbrains-plugin-demo</name>
+    <vendor email="support@yourcompany.com" url="https://www.yourcompany.com">YourCompany</vendor>
+    <description>Test description</description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends config-file="dependency-plugin-java.xml" optional="true">com.intellij.java</depends>
+</idea-plugin>
