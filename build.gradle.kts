@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     id("java")
-    id("org.jetbrains.kotlin.jvm") version "1.9.10"
+    id("org.jetbrains.kotlin.jvm") version "1.9.20"
     id("org.jetbrains.intellij") version "1.16.0"
 }
 
@@ -35,6 +35,11 @@ allprojects {
 
         withType<KotlinCompile> {
             kotlinOptions.jvmTarget = "17"
+        }
+
+        withType<Test> {
+            useJUnit()
+            systemProperties["my.project.property"] = "gradle build value"
         }
 
         patchPluginXml {
